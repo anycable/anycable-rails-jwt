@@ -1,0 +1,3 @@
+test:
+  jwt_id_key: __secret_anycable__
+  jwt_id_ttl: <%= 60 * 5 %>
