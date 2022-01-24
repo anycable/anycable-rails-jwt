@@ -71,6 +71,30 @@ module ApplicationCable
 end
 ```
 
+In AnyCable a token's TTL is checked by the `anycable-go` server. In case the token is expired, the server [would disconnect with a specific reason](https://anycable.io/blog/jwt-identification-and-hot-streams/) `token_expired`.
+
+To mimic this behavior without AnyCable, you can add a simple patch to your application connection:
+
+```ruby
+module ApplicationCable
+  class Connection < ActionCable::Connection::Base
+    # ...
+    
+    private
+
+    # Overload the +ActionCable::Connection::Base+ to handle JWT expiration
+    # as rejected connection with a specific reason.
+    # (in AnyCable this check is <also> done by the `anycable-go` server).
+    def handle_open
+      super
+    rescue JWT::ExpiredSignature
+      logger.error 'An expired JWT token was rejected'
+      close(reason: 'token_expired', reconnect: false) if websocket.alive?
+    end
+  end
+end
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at [https://github.com/anycable/anycable-rails-jwt](https://github.com/anycable/anycable-rails-jwt).
