@@ -58,7 +58,7 @@ module ApplicationCable
     identified_by :current_user
 
     def connect
-      token = request.params[:token]
+      token = request.params[:jid]
 
       identifiers = AnyCable::Rails::JWT.decode(token)
       identifiers.each do |k, v|
