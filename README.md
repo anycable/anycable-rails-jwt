@@ -79,7 +79,7 @@ To mimic this behavior without AnyCable, you can add a simple patch to your appl
 module ApplicationCable
   class Connection < ActionCable::Connection::Base
     # ...
-    
+
     private
 
     # Overload the +ActionCable::Connection::Base+ to handle JWT expiration
@@ -88,8 +88,8 @@ module ApplicationCable
     def handle_open
       super
     rescue JWT::ExpiredSignature
-      logger.error 'An expired JWT token was rejected'
-      close(reason: 'token_expired', reconnect: false) if websocket.alive?
+      logger.error "An expired JWT token was rejected"
+      close(reason: "token_expired", reconnect: false) if websocket.alive?
     end
   end
 end

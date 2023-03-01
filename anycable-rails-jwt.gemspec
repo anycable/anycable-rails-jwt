@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir.glob("lib/**/*") + Dir.glob("bin/**/*") + %w[README.md LICENSE.txt CHANGELOG.md]
   s.require_paths = ["lib"]
-  s.required_ruby_version = ">= 2.6"
+  s.required_ruby_version = ">= 2.7"
 
   s.add_dependency "anycable-rails", "~> 1.1"
   s.add_dependency "jwt", "~> 2.2"
