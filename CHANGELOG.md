@@ -2,6 +2,8 @@
 
 ## master
 
+## 0.2.0 (2023-07-25)
+
 - Changed **anycable-rails** dependency to **anycable-rails-core**.
 - **Ruby 2.7+** is required.
 
