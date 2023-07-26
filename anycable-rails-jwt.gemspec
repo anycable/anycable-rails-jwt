@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.required_ruby_version = ">= 2.7"
 
-  s.add_dependency "anycable-rails", "~> 1.1"
+  s.add_dependency "anycable-rails-core", "~> 1.1"
   s.add_dependency "jwt", "~> 2.2"
 
   s.add_development_dependency "bundler", ">= 1.15"
