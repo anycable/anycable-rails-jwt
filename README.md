@@ -3,7 +3,7 @@
 
 # Anycable Rails JWT
 
-AnyCable Rails helpers for [JWT-based identification](https://docs.anycable.io/anycable-go/jwt_identification) from [AnyCable PRO][pro].
+AnyCable Rails helpers for [JWT-based identification](https://docs.anycable.io/anycable-go/jwt_identification).
 
 ## Installation
 
@@ -102,5 +102,3 @@ Bug reports and pull requests are welcome on GitHub at [https://github.com/anyca
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
-[pro]: https://anycable.io/#pro
