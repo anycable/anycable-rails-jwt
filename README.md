@@ -3,6 +3,9 @@
 
 # Anycable Rails JWT
 
+> [!NOTE]
+> This gem has been merged into `anycable` and `anycable-rails` gems since AnyCable v1.5.
+
 AnyCable Rails helpers for [JWT-based identification](https://docs.anycable.io/anycable-go/jwt_identification).
 
 ## Installation

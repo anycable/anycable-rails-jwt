@@ -2,6 +2,10 @@
 
 ## master
 
+## 0.2.1 (2024-03-12) 🪦
+
+- This gem has been merged into `anycable` and `anycable-rails` gems.
+
 ## 0.2.0 (2023-07-25)
 
 - Changed **anycable-rails** dependency to **anycable-rails-core**.
